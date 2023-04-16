@@ -1,0 +1,68 @@
+.rd{
+    border-radius: 7px;
+   width: 100px;
+    
+
+}
+.t{
+    float: right;
+}
+
+.bt{
+    width: 25vw;
+}
+.bt:hover{
+    color: white;
+}
+.co{
+    border: 1px solid rgb(50, 47, 92);
+}
+.cot{
+    color: rgb(14, 14, 112);
+}
+.abc{
+    text-align:center;
+}
+.ct:hover{ 
+      background-color:rgb(128, 128, 223);
+}
+.ctt{
+    margin-left: 100px;
+}
+.ct{
+    text-decoration: none !important;
+}
+
+.about{
+    background-image: url('static/assets/img/i2.jpg') !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow-y: hidden;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+    margin: 0vw 0vw;
+    color:white;
+    overflow-x: hidden;
+    width: 100%;
+}
+.aus{
+    overflow-x: hidden;
+    padding: 0%;
+    margin: 0%;
+}
+.abt{
+    margin: 2vw 10vw;
+}
+.foot{
+    background-color: rgb(33, 42, 173);
+    color: white;
+    padding: 6vw 15vw ;
+}
+.linew{
+    height: 1px;
+    width: 150px; 
+    background-color: white;
+    margin-bottom: 10px;
+}

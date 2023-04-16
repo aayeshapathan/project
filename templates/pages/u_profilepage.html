@@ -1,0 +1,128 @@
+{% extends 'index.html' %}
+{%load static %}
+{%block content%}
+
+<div style="text-align:center;">
+  <span style="font-size: 20px; color: Dodgerblue; margin: 2vw 20vw ">
+    <i class="fas fa-user-circle fa-7x"></i>
+    <br>
+  </span>
+  <h2>{{JUser.FName}} {{JUser.LName}}</h2>
+
+</div>
+<br>
+<br>
+
+<div class="container">
+  <div class="row g-2">
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Email ID</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.email}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Mobile Number</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.MobileNumber}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Gender</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.Gender}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Education</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.Education}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Experience</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.Experience}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Skills</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.Skills}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Resume</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: <a href="{{JUser.Rfile}}" target="_blank">{{JUser.Rfile}}</a></div>
+    </div>
+
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+    <div class="col-3">
+      <div class="p-3 bg-white">Applied</div>
+    </div>
+    <div class="col-5">
+      <div class="p-3 bg-white">: {{JUser.FName}}</div>
+    </div>
+    <div class="col-2">
+      <div class="p-3 bg-white"></div>
+    </div>
+
+  </div>
+  <br>
+  <div class="row g-2">
+    <div class="col-12" style="text-align: center;">
+      <a class="btn btn-primary" href="{% url 'u_Editform' %}" role="button">Edit Details</a>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'index.html' %}
+{%load static %}
+{%block content%}
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+</style>
+
+<div class="container">
+  <div class="row d-flex justify-content-center mt-4">
+    <div class="col-lg-6 ">
+      <h2 class="cot">Description Form</h2>
+      <form method="POST" action="{% url 'description'%}">
+        {% csrf_token %}
+        <div class="form-group">
+          <label>Company Name<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" value="{{Cuser.CName}}" name="CName" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label>Company Information<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" value="{{Cuser.CInfo}}" name="CInfo" autocomplete="off">
+          {% comment %} <textarea class="form-control" value="{{Cuser.CInfo}}" name="CInfo"></textarea> {% endcomment %}
+        </div>
+        <div class="form-group">
+          <label>Location<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" value="{{Cuser.Location}}" name="Location"
+            autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label>Job Position<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" placeholder="Job Position" name="Position"
+            autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label>Job Description<span style="color:red">*</span></label>
+          <textarea required class="form-control" placeholder="Description" name="Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Job Type<span style="color:red">*</span></label>
+          <!--<input  required type="text" class="form-control"  placeholder="Type of a job"  autocomplete="off">-->
+          <select id="inputState" class="form-select" name="JobType">
+            <option selected>Choose...</option>
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Work From Home</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Required Knowledge and Skills<span style="color:red">*</span></label>
+          <textarea required class="form-control" placeholder="Knowledge and Skills" name="Knowledge_Skills"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Education<span style="color:red">*</span></label>
+          <textarea required class="form-control" placeholder="Education" name="Education"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Experience<span style="color:red">*</span></label>
+          <textarea required class="form-control" placeholder="Experience" name="Experience"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Salary<span style="color:red">*</span></label>
+          <input required type="number" class="form-control" placeholder="Salary" name="Salary">
+        </div>
+        <div class="form-group">
+          <label>Vacancies<span style="color:red">*</span></label>
+          <input required type="number" class="form-control" placeholder="Number of Vacancies" name="Vacancies">
+        </div>
+        <div class="form-group">
+          <label>Last date of Application<span style="color:red">*</span></label>
+          <input required type="date" class="form-control" placeholder="Knowledge and Skills" name="Lastdate">
+        </div>
+
+        <div class="form-group">
+          <input type="hidden" class="form-control" value="{{Cuser.ID}}" name="uk_id" autocomplete="off">
+          <!--<input type="text" class="form-control"  value="{{Company.UKID}}" name="jd_id" autocomplete="off">-->
+        </div>
+
+        <button type="submit" class="btn btn-default" onclick="buttonclicked()"
+          style="border:1px solid rgb(14, 14, 112);">Submit</button>
+        <script>function buttonclicked() {
+            alert("Data submitted successfully.")
+          }
+        </script>
+      </form>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+{%endblock%}
+<!--
+
+      <div class="abc">
+        <h6>&copy &nbsp Sparkle</h6> 
+    </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
+-->

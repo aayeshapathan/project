@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%load static %}
+{%block content%}
+
+<br>
+<br>
+<div class=" text-center cot">
+  <h1><b>Hello there..!</b> </h1>
+  <h5><b>Please select any one any of this button.</b> </h5>
+</div>
+<br>
+<div style="text-align: center; ">
+  <a href="{% url 'login' %}" class="border-btn2 border-btn4 btn-outline-dark ct"> &nbsp User Login &nbsp &nbsp</a>
+  <br>
+  <br>
+  <a href="{% url 'c_login' %}" class="border-btn2 border-btn4 btn-outline-dark ct">Company Login</a>
+  <br>
+</div>
+<br>
+
+{%endblock%}

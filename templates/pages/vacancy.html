@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+{%load static %}
+{%block content%}
+
+<div style="text-align:center;" class="cot">
+  <h2>{{CUser.CName}}</h2>
+  <br>
+</div>
+<br>
+
+
+<div class="container">
+  <div class="card profile p-4">
+    <div class="profile-header">
+      <div class="profile-header-cover"></div>
+      <div class="profile-header-content">
+        <!--<div class="profile-header-img">
+                    <img class="rounded-circle" width="150" src="assets/img/user.png" alt="" />
+                </div>-->
+      </div>
+    </div>
+    <div class="profile-container">
+      <div class="profile-sidebar">
+        <div class="desktop-sticky-top">
+          <h4 style="text-align:center">Job Vacancies</h4>
+
+          <!--
+                    <h2>{{CUser.CName}}</h2>
+                    <div class="font-weight-600 mb-3 text-muted mt-n2" style="text-align:center">{{CUser.email}}</div>
+                    
+                    <div class="mb-1" style="text-align:center"> {{CUser.Location}}</div>-->
+
+          <hr class="mt-4 mb-4" />
+          <div class="row">
+            {% if jobdescription %}
+            {%for jobdescription in jobdescription %}
+
+            <div class="col-3">
+              <h4>{{jobdescription.Position}}</h4>
+            </div>
+            <div class="col-6">
+              <p>{{jobdescription.Description}}</p>
+            </div>
+            <div class="col-1" style="text-align:center">
+              <p>{{jobdescription.Vacancies}}</p>
+            </div>
+
+            <div class="bg-white col-2" style="text-align:center;"><a class="btn btn-primary"
+                href="{% url 'VacancyDelete' jobdescription.ID %}" role="button">Delete</a></div>
+            <!--<input type="text" value={{list_data.a}} name="a_id">-->
+            {% comment %}
+            <!--<div class="bg-white col-4" style="text-align:right;"><a class="btn btn-primary" href="{% url 'viewdetails' list_data.User.ID list_data.a%}" role="button">view</a></div>-->
+            {% endcomment %}
+
+            {% endfor %}
+            {% else %}
+            <p style="text-align : center;">You have not added any Job Vacancy yet. Add one by clicking on '+Add Description' on the My Account page.</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <!--<hr class="mt-4 mb-4" />
+                    <h4> Company Information:</h4><p>{{CUser.CInfo}}</p>-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<br>
+{%endblock%}

@@ -1,0 +1,280 @@
+{% extends 'index.html' %}
+{%load static %}
+{%block content%}
+<style>
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+</style>
+
+<div class="container">
+  <div class="row d-flex justify-content-center mt-4">
+    <div class="col-lg-6 ">
+      <h2 class="cot">Registration Form</h2>
+      <form method="POST" name='myform' enctype="multipart/form-data" action="{% url 'u_register' %}"
+        onsubmit='return validate()'>
+        {% csrf_token %}
+        <div class="form-group">
+          <label>First Name<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" placeholder="First Name" name="FName">
+        </div>
+        <div class="form-group">
+          <label>Middle Name</label>
+          <input type="text" class="form-control" placeholder="Middle Name" name="MName" autocomplte="off">
+        </div>
+        <div class="form-group">
+          <label>Last Name<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" placeholder="Last Name" name="LName">
+        </div>
+        <div class="form-group">
+          <label>Gender<span style="color:red">*</span></label> &nbsp &nbsp &nbsp &nbsp
+          <input class="form-check-input" type="radio" name="Gender" value="Female" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Female
+          </label>&nbsp &nbsp &nbsp &nbsp
+          <input class="form-check-input" type="radio" name="Gender" id="flexRadioDefault2" value="Male" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Male
+          </label>
+        </div>
+        <div class="form-group">
+          <label>Email ID<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" placeholder="Email" name="email" id="email"
+            autocomplete="off">
+        </div>
+
+        <script>
+          $(document).on('click', '.toggle-password', function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+
+            var input = $("#pwd_log_id");
+            input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+          });</script>
+        <div class="form-group">
+          <label>Password<span style="color:red">*</span></label>
+          <br>
+          <div style="border: 1px solid #ddd7d7; border-radius: 5px; padding:4px;">
+            <input required type="password" class="col-auto" placeholder="Password" name="pwd" id="pwd_log_id"
+              style="border: 0px">
+            <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password col-auto"
+              style="float:right; padding-left:2px; padding-top:4px;"></span>
+          </div>
+        </div>
+
+        <script>
+          $(document).on('click', '.toggle-password_confirm', function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+
+            var input = $("#pwd_log_id_confirm");
+            input.attr('type') === 'password' ? input.attr('type', 'text') : input.attr('type', 'password')
+          });</script>
+        <div class="form-group">
+          <label>Confirm Password<span style="color:red">*</span></label>
+          <br>
+          <div style="border: 1px solid #ddd7d7; border-radius: 5px; padding:4px;">
+            <input required type="password" class="col-auto" placeholder="Confirm Password" name="pwd_confirm"
+              id="pwd_log_id_confirm" style="border: 0px">
+            <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password_confirm col-auto"
+              style="float:right; padding-left:2px; padding-top:4px;"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number<span style="color:red">*</span></label>
+          <input required type="number" class="form-control" placeholder="Mobile Number" name="MobileNumber"
+            id="mobile">
+          <p id="demo"></p>
+        </div>
+
+
+        <div class="form-group">
+          <label>Address<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" placeholder="City, State" name="Address">
+        </div>
+        <div class="form-group">
+          <label>Education<span style="color:red">*</span></label>
+          <input required type="text" class="form-control" placeholder="Last Qualified Degree" name="Education">
+        </div>
+
+
+        <div class="form-group">
+          <label>Key Skills</label>
+          <input type="text" class="form-control" placeholder="Key Skills" name="Skills" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label>Experience</label>
+          <input type="number" class="form-control" placeholder="Experience" name="Experience" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlFile1">Choose Resume file <span style="color:red">*</span> </label>
+          <input required type="file" class="form-control" id="exampleFormControlFile1" name="Rfile" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-default" style="border:1px solid rgb(14, 14, 112);">Submit</button>
+      </form>
+      <br>
+      <h5 style="color:red; text-align:center;">{{Invalid}}</h5>
+      <h5 style="color:green; text-align:center;">{{valid}}</h5>
+    </div>
+  </div>
+</div>
+<br>
+<h6 style="text-align:center;">To login into your account, please <a href="{% url 'login' %}">click here</a>
+  <br>
+  <script>
+    function validate() {
+      var x = document.myform.email.value;
+      var atposition = x.indexOf("@");
+      var dotposition = x.lastIndexOf(".");
+      if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+        alert("Please enter a valid e-mail address.");
+        return false;
+      }
+
+    }
+
+
+  </script>
+  {%endblock%}
+  <!--
+
+    alert("Please enter a valid e-mail address \n atpostion:" + atposition + "\n dotposition:" + dotposition);
+    var x, text;
+
+    // Get the value of the input field with id="numb"
+    y = document.getElementById("mobile").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (isNaN(y)) {
+      text = 'Nope';
+      alert('not ok')
+    }
+    else if (y.lenght < 10) {
+      text = 'Nope';
+      alert('not ok')
+    }
+    else if (y.lenght > 10) {
+      text = 'Nope';
+      alert('not ok')
+    }
+    else {
+      alert('ok')
+    }
+    document.getElementById("demo").innerHTML = text;
+
+          <div class="abc">
+            <h6>&copy &nbsp Sparkle</h6> 
+        </div>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </body>
+    </html>
+    onclick="ValidateNo();"
+    onkeypress="return isNumber(event)"
+-->
+
+  <!-- <script>
+                        {% comment %} function validateemail(x)  
+                        {  
+                        onKeyPress="if(this.value.length==10) return false;"
+                        var x=document.email.value; 
+                        return validateemail(email.value); 
+                         
+                        }   {% endcomment %}
+
+                        {% comment %} function ValidateEmail(mail) 
+                        {
+                        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
+                          {
+                            return (true)
+                          }
+                            alert("You have entered an invalid email address!")
+                            return (false)
+                        } {% endcomment %}
+
+
+
+                          {% comment %} function validateemail(){
+                          var atposition=x.indexOf("@");  
+                          var dotposition=x.lastIndexOf(".");  
+                          if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+                              
+                            return false;  
+                            } 
+                          } {% endcomment %}
+                          {% comment %} function validateno(phoneNo){
+                            console.log(phoneNo.value)
+                            /*if (phoneNo.value == "") {
+                              alert("Please enter your Mobile No.");
+                              return false;
+                            }*/
+                            if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
+                              
+                              return false;
+                            }
+                          }
+
+                        function Validate(){
+                          var x = document.getElementById('email');
+                          var phoneNo = document.getElementById('mobile');
+
+                          var a=validateemail(x);
+                          var b=validateno(phoneNo);
+
+                          if(a=="false" && b=="false"){
+                            alert("Please enter a valid e-mail address and Mobile Number");
+                            return false;
+                          }
+
+                          else if(a=="false"){
+                            alert("Please enter a valid e-mail address");
+                          }
+
+                          else if(b=="false"){
+                            alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+                          }
+
+                          else{
+                            alert("Success ");
+                            return true;
+                          }
+                          
+                        } {% endcomment %}
+                    </script> -->
+
+  <!--
+                         pattern="/^-?\d+\.?\d*$/"
+                       function isNumber(evt) {
+                          evt = (evt) ? evt : window.event;
+                          var charCode = (evt.which) ? evt.which : evt.keyCode;
+                          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                            alert("Please enter only Numbers.");
+                            return false;
+                          }
+
+                          return true;
+                        }
+                        
+                        function ValidateNo() {
+                          var phoneNo = document.getElementByName('MobileNumber');
+
+                          if (phoneNo.value == "" || phoneNo.value == null) {
+                            alert("Please enter your Mobile No.");
+                            return false;
+                          }
+                          if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
+                            alert("Mobile No. is not valid, Please Enter 10 Digit Mobile No.");
+                            return false;
+                          }
+
+                          alert("Success ");
+                          return true;
+                        }
+                        -->

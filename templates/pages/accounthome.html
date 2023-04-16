@@ -1,0 +1,408 @@
+{% extends 'log.html' %}
+{%load static %}
+{%block content%}
+<main>
+
+    <!-- slider Area Start-->
+    <div class="slider-area ">
+        <!-- Mobile Menu -->
+        <div class="slider-active">
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <!--  <div class="col-xl-6 col-lg-9 col-lg-20">d-lg-block-->
+                        <div class="hero__caption">
+                            <h1>Get Yourself Registered</h1>
+                        </div>
+                    </div>
+
+                    <!-- Search Box -->
+                    <div class="row">
+
+                        <div class="header-btn ">
+                            <a href="{%url 'register' %}" class="btn head-btn1 bg-white bt r1" style="color: black;"
+                                onMouseOver="this.style.color='white'"
+                                onMouseOut="this.style.color='black'">Register</a>
+                            <!--register.html-->
+                            <a href="{%url 'login' %}" class="btn head-btn2 bg-light bt"
+                                onMouseOver="this.style.color='white'" onMouseOut="this.style.color='black'">Login</a>
+                            <!--login.html-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider Area End-->
+
+</main>
+<br>
+<br>
+<!-- Our Services Start -->
+<div class="our-services">
+    <div class="container">
+        <!-- Section Tittle -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class=" text-center cot">
+                    <h1><b>Browse job by Category</b> </h1>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-contnet-center">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-tour"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{%url 'interiordesignerjob' %}"><img src="{% static 'assets/img/icon/job1.png' %}"
+                                alt=""></a>
+                        <!--job_details.html-->
+                        <h5><a href="{%url 'interiordesignerjob' %}">Interior Designer</a></h5>
+                        <!--job_listing.html-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-cms"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{%url 'accountantjob' %}"><img src="{% static 'assets/img/icon/job2.png' %}"
+                                alt=""></a>
+                        <!--job_details.html-->
+                        <h5><a href="{%url 'accountantjob' %}">Accountant</a></h5>
+                        <!--job_listing.html-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-report"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{% url 'dataentryjob' %}"><img src="{% static 'assets/img/icon/job3.png' %}"
+                                alt=""></a>
+                        <h5><a href="{% url 'dataentryjob' %}">Data Entry</a></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-app"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{% url 'androidjob' %}"><img src="{% static 'assets/img/icon/job4.png' %}" alt=""></a>
+                        <h5><a href="{% url 'androidjob' %}">Android Developer</a></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-helmet"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{% url 'systemanalystjob' %}"><img src="{% static 'assets/img/icon/job5.png' %}"
+                                alt=""></a>
+                        <h5><a href="{% url 'systemanalystjob' %}">System Analyst</a></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-high-tech"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{%url 'businessanalystjob' %}"><img src="{% static 'assets/img/icon/job6.png' %}"
+                                alt=""></a>
+                        <h5><a href="{%url 'businessanalystjob' %}">Business Analyst</a></h5>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-real-estate"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{% url 'contentwriterjob' %}"><img src="{% static 'assets/img/icon/job7.png' %}"
+                                alt=""></a>
+                        <h5><a href="{% url 'contentwriterjob' %}">Content Writer</a></h5>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="single-services text-center mb-30">
+                    <div class="services-ion">
+                        <span class="flaticon-content"></span>
+                    </div>
+                    <div class="services-cap">
+                        <a href="{% url 'othersjob' %}"><img src="{% static 'assets/img/icon/job8.png' %}" alt=""></a>
+                        <h5><a href="{% url 'othersjob' %}">Others Jobs</a></h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- More Btn -->
+
+    </div>
+</div>
+<!-- Our Services End -->
+
+
+<!-- Online CV Area Start -->
+
+<div class="online-cv cv-bg section-overly pt-90 pb-120 "
+    style="background: url(../../static/assets/img/gallery/cv_bg.jpg); background-repeat: no-repeat;background-position: center center; background-size: cover;">
+    <div class="container h">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="cv-caption text-center">
+                    <p class="pera2"> Make a Difference with Your Online Resume!</p>
+                    <a href="{% url 'login' %}" class="border-btn2 border-btn4 btn-outline-light">Upload your Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Online CV Area End-->
+
+<!-- Featured_job_start -->
+<section class="featured-job-area feature-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class=" text-center cot">
+                    <h1><b>Featured jobs</b> </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                {% if Jobs %}
+                {% for Job in Jobs %}
+
+                <!-- single-job-content -->
+                <div class="single-job-items mb-30">
+                    <div class="job-items">
+                        <div class="company-img">
+                            <a href="job_details.html"></a>
+                            <div class="job-tittle">
+                                <a href="job_details.html">
+                                    <h4>{{Job.Position}}</h4>
+                                </a>
+                                <h6>{{Job.CName}}</h6>
+                                <ul>
+                                    <li><i class="fa fa-map-marker-alt"></i>{{Job.Location}}</li>
+                                    <li><i class="fa fa-briefcase"></i>{{Job.Experience}}</li>
+                                    <br>
+                                    <p>Skills: {{Job.Knowledge_Skills}}</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <form method="POST" action="{% url 'jobdescription' %}">
+                        {% csrf_token %}
+                        <input type="hidden" value="Job.id" name="job_id">
+
+                        <div class="items-link f-right">
+                            <button type="submit">Apply Now</button>
+
+                        </div>
+                    </form>
+                </div>
+                {% endfor %}
+                <nav aria-label="Page navigation example">
+                    {% if Jobs.has_other_pages %}
+                    <ul class="pagination justify-content-center">
+                        {% if Jobs.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{Jobs.previous_page_number}}">&laquo;</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled"><a class="page-link">&laquo;</a></li>
+                        {% endif %}
+                        {% for i in Jobs.paginator.page_range %}
+                        {% if Jobs.number == i %}
+                        <li class="page-item activate"><a class="page-link">{{i}}</a></li>
+                        {% else %}
+                        <li class="page-item"><a class="page-link" href="?page={{i}}">{{i}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                        {% if Jobs.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{Jobs.next_page_number}}">&raquo;</a>
+                        </li>
+                        {% else %}
+                        <li class="page-item disabled"><a class="page-link">&raquo;</a></li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                </nav>
+                {% else %}
+                {% endif %}
+                <!--
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        
+                      <div class="single-job-items mb-30">
+                    <div class="job-items">
+                        <div class="company-img">
+                            <a href="job_details.html"></a>
+                            <div class="job-tittle">
+                                <a href="job_details.html"><h4>Data Entry Jobs</h4></a>
+                                <h6>Zarbex Solutions </h6>
+                                <ul>
+                                    <li><i class="fa fa-map-marker-alt"></i>Bengaluru/ Bangalore, Pune</li>
+                                    <li><i class="fa fa-briefcase"></i>0-5 Years</li>
+                                    <br>
+                                    <p>Skills : Data Entry Executive, Back Office Executive, Basic Knowledge, Typing Speed</p>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-link f-right">
+                        <a href="{% url 'jobdescription' %}">Apply Now</a>
+                       
+                    </div>
+                </div>
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="job_details.html"><img src="{% static 'assets/img/icon/job-list2.png' %}" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="job_details.html"><h4>R&D Manager</h4></a>
+                                    <ul>
+                                        <li>Creative Agency</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>Type : Part time</li>
+                                        <li>Time:2 years ago </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="login.html">Apply Now</a>
+                           
+                            </div>
+                        </div>
+                         
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="job_details.html"><img src="{% static 'assets/img/icon/job-list3.png' %}" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="job_details.html"><h4>Looking for HR Manager</h4></a>
+                                    <ul>
+                                        <li>Creative Agency</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>TypeFull time</li>
+                                        <li>Time:2 years ago</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="login.html">Apply Now</a>
+                            
+                            </div>
+                        </div>
+                         
+                        <div class="single-job-items mb-30">
+                            <div class="job-items">
+                                <div class="company-img">
+                                    <a href="job_details.html"><img src="{% static 'assets/img/icon/job-list4.png' %}" alt=""></a>
+                                </div>
+                                <div class="job-tittle">
+                                    <a href="job_details.html"><h4>Network Assistant Manager</h4></a>
+                                    <ul>
+                                        <li>Creative Agency</li>
+                                        <li><i class="fas fa-map-marker-alt"></i>TypeContract</li>
+                                        <li>Time:2 years ago</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="items-link f-right">
+                                <a href="login.html">Apply Now</a>
+                               
+                            </div>
+                        </div>-->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Featured_job_end -->
+
+<div class="apply-process-area apply-bg pt-60 pb-150"
+    data-background="{% static 'assets/img/gallery/how-applybg.png' %}">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!--    <div class="section-tittle white-text text-center ">
+                            <span><h3 class="cot">Apply process</h3></span>
+                        </div>-->
+                <div class=" text-center cot">
+                    <h1><b>How it Works</b> </h1>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6 ">
+                <div class="single-process text-center mb-30 co">
+                    <div class="process-ion">
+                        <span class="flaticon-search"></span>
+                    </div>
+                    <div class="process-cap">
+                        <h5>1. Search a job</h5>
+                        <p>Search a job of your choice with your prefered location and it just got easier with sparkle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-process text-center mb-30 co">
+                    <div class="process-ion">
+                        <span class="flaticon-curriculum-vitae"></span>
+                    </div>
+                    <div class="process-cap">
+                        <h5>2. Apply for job</h5>
+                        <p>Get registered and apply for job of your choice.
+                            We will Offer You Best Opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-process text-center mb-30 co">
+                    <div class="process-ion">
+                        <span class="flaticon-tour"></span>
+                    </div>
+                    <div class="process-cap">
+                        <h5>3. Get your job</h5>
+                        <p>A better career is out there.We are your first step to become everything you want to be. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

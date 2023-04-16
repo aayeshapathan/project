@@ -1,0 +1,127 @@
+{% extends 'index.html' %}
+{%load static %}
+{%block content%}
+
+<div class="container">
+  <div class="row d-flex justify-content-center mt-4">
+    <div class="col-lg-6 ">
+      <h2 class="cot">Qualification</h2>
+      <form method="POST" action="Edudetails.html">
+
+        <div class="form-group">
+          <label for="validationTooltip04" class="form-label">10th Board</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>International board</option>
+            <option>CBSE</option>
+            <option>state board</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>10th Roll number:</label>
+          <input type="text" class="form-control" placeholder="Roll number" name="UserName" required>
+        </div>
+
+        <div class="form-group">
+          <label>10th percentage</label>
+          <input type="number" class="form-control" placeholder="percentage" name="percentage1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="validationTooltip04" class="form-label">12th Board</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>International board</option>
+            <option>CBSE</option>
+            <option>state board</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>12th Roll number:</label>
+          <input type="text" class="form-control" placeholder="Roll number" name="UserName">
+        </div>
+
+
+        <div class="form-group">
+          <label>12th percentage</label>
+          <input type="number" class="form-control" placeholder="percentage" name="percentage1">
+        </div>
+
+        <div class="form-group">
+          <label for="validationTooltip04" class="form-label">Graduate Board</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>International board</option>
+            <option>CBSE</option>
+            <option>state board</option>
+          </select>
+        </div>
+
+
+
+        <div class="form-group">
+          <label>Diploma Roll number:</label>
+          <input type="text" class="form-control" placeholder="Roll number" name="UserName">
+        </div>
+
+
+        <div class="form-group">
+          <label>Diploma percentage</label>
+          <input type="number" class="form-control" placeholder="percentage" name="percentage1">
+        </div>
+
+        <div class="form-group">
+          <label for="validationTooltip04" class="form-label">Diploma Board</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>International board</option>
+            <option>CBSE</option>
+            <option>state board</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Graduate Roll number:</label>
+          <input type="text" class="form-control" placeholder="Roll number" name="UserName">
+        </div>
+
+
+        <div class="form-group">
+          <label>Graduate percentage</label>
+          <input type="number" class="form-control" placeholder="percentage" name="percentage1">
+        </div>
+
+        <div class="form-group">
+          <label for="validationTooltip04" class="form-label">Post Graduate Board</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Choose...</option>
+            <option>International board</option>
+            <option>CBSE</option>
+            <option>state board</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Post Graduate Roll number:</label>
+          <input type="text" class="form-control" placeholder="Roll number" name="UserName">
+        </div>
+
+
+        <div class="form-group">
+          <label>Post Graduate percentage</label>
+          <input type="number" class="form-control" placeholder="percentage" name="percentage1">
+        </div>
+
+        <button type="submit" class="btn btn-default" onclick="buttonclicked()"
+          style="border:1px solid rgb(14, 14, 112);">Submit</button>
+        <script>function buttonclicked() {
+            alert("Data submitted successfully.")
+          }
+        </script>
+      </form>
+    </div>
+  </div>
+</div>
+{%endblock%}
