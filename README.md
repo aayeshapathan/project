@@ -13,3 +13,5 @@ Technologies Used
 	•	Backend: Django (Python), MySQL
 	•	Frontend: HTML, CSS, JavaScript, Bootstrap 5, Django Templates
 	•	Additional Features: Django authentication, REST APIs
+ 
+![pic_1](https://github.com/user-attachments/assets/56430ca5-d0ab-4fbe-9027-a8e00fe8b7d7)
